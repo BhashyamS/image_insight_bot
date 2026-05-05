@@ -17,7 +17,14 @@ st.set_page_config(page_title="Image Insight Bot", page_icon="🖼️", layout="
 
 st.markdown("""
 <style>
-.main-title{font-size:2.4rem;font-weight:800;margin-bottom:.1rem}.muted{color:#667085}.tag{display:inline-block;padding:.25rem .6rem;margin:.15rem;border-radius:999px;background:#EEF4FF;color:#3538CD;font-weight:650;font-size:.82rem}.insight{border-left:4px solid #7F56D9;background:#F9F5FF;padding:.8rem 1rem;border-radius:12px;margin:.5rem 0}.note{border-left:4px solid #F79009;background:#FFFAEB;padding:.8rem 1rem;border-radius:12px;margin:.5rem 0}
+.main-title{font-size:2.4rem;font-weight:800;margin-bottom:.1rem}
+.muted{color:#667085}
+.tag{display:inline-block;padding:.25rem .6rem;margin:.15rem;border-radius:999px;background:#EEF4FF;color:#3538CD!important;font-weight:650;font-size:.82rem}
+.tag *{color:#3538CD!important}
+.insight{border-left:4px solid #7F56D9;background:#F9F5FF;padding:.8rem 1rem;border-radius:12px;margin:.5rem 0;color:#111827!important}
+.insight *{color:#111827!important}
+.note{border-left:4px solid #F79009;background:#FFFAEB;padding:.8rem 1rem;border-radius:12px;margin:.5rem 0;color:#111827!important}
+.note *{color:#111827!important}
 </style>
 """, unsafe_allow_html=True)
 
@@ -156,9 +163,11 @@ def main():
         model = st.selectbox("Gemini model", ["gemini-2.5-flash","gemini-2.0-flash","gemini-3-flash-preview"], index=0)
         lens = st.selectbox("Business lens", ["Marketing Analytics","Retail Merchandising","Product Marketing","Event Activation","Social Media Campaign"])
         detail = st.radio("Detail level", ["Concise","Balanced","Detailed"], index=1)
+        st.caption("Deploy note: add GEMINI_API_KEY in Streamlit Cloud secrets.")
     files = st.file_uploader("Upload one or more images", type=["png","jpg","jpeg"], accept_multiple_files=True)
     if not files:
         st.info("Upload a PNG, JPG, or JPEG image to start.")
+        st.write("Demo flow: image upload → Gemini analysis → caption + objects → business recommendations → JSON export")
         return
     if not key:
         st.warning("Add your Gemini API key in the sidebar or Streamlit secrets before running analysis.")
