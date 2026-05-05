@@ -163,11 +163,9 @@ def main():
         model = st.selectbox("Gemini model", ["gemini-2.5-flash","gemini-2.0-flash","gemini-3-flash-preview"], index=0)
         lens = st.selectbox("Business lens", ["Marketing Analytics","Retail Merchandising","Product Marketing","Event Activation","Social Media Campaign"])
         detail = st.radio("Detail level", ["Concise","Balanced","Detailed"], index=1)
-        st.caption("Deploy note: add GEMINI_API_KEY in Streamlit Cloud secrets.")
     files = st.file_uploader("Upload one or more images", type=["png","jpg","jpeg"], accept_multiple_files=True)
     if not files:
         st.info("Upload a PNG, JPG, or JPEG image to start.")
-        st.write("Demo flow: image upload → Gemini analysis → caption + objects → business recommendations → JSON export")
         return
     if not key:
         st.warning("Add your Gemini API key in the sidebar or Streamlit secrets before running analysis.")
