@@ -1,5 +1,6 @@
 # Image Insight Bot
 Demo Link: [https://imageinsightbot-jq29agmbspkmvbhzbsg7if.streamlit.app/]
+
 An AI-powered Streamlit prototype that analyzes uploaded images and turns visual content into captions, detected objects, searchable tags, confidence-style scores, and business recommendations.
 
 ## Problem
