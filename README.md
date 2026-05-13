@@ -1,5 +1,5 @@
 # Image Insight Bot
-
+Demo Link: [https://imageinsightbot-jq29agmbspkmvbhzbsg7if.streamlit.app/]
 An AI-powered Streamlit prototype that analyzes uploaded images and turns visual content into captions, detected objects, searchable tags, confidence-style scores, and business recommendations.
 
 ## Problem
@@ -27,34 +27,6 @@ This app uses Google AI Studio / Gemini API through the `google-genai` Python SD
 
 ## Confidence scoring
 The confidence score is a visual clarity score, not a hidden model probability. The prompt asks Gemini to estimate confidence based on how clear and visible the image evidence is.
-
-## Local setup
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Create `.streamlit/secrets.toml`:
-
-```toml
-GEMINI_API_KEY = "your-api-key-here"
-```
-
-Do not commit your real API key to GitHub.
-
-## Streamlit Cloud deployment
-1. Push these files to GitHub.
-2. Go to Streamlit Community Cloud.
-3. Create a new app from the GitHub repo.
-4. Set the main file path to `app.py`.
-5. Add this in App settings → Secrets:
-
-```toml
-GEMINI_API_KEY = "your-api-key-here"
-```
-
-6. Deploy and copy the app URL.
 
 ## Example output
 
