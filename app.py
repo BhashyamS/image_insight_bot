@@ -549,7 +549,7 @@ def main() -> None:
             ],
         )
         detail = st.radio("Report depth", ["Executive", "Balanced", "Detailed"], index=1)
-        st.caption("Tip: Add GEMINI_API_KEY in Streamlit Cloud secrets for deployment.")
+        
 
     files = st.file_uploader(
         "Upload one or more product, retail, event, or campaign images",
