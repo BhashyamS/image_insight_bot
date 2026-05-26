@@ -230,5 +230,4 @@ streamlit run app.py
 ## Author
 
 **Srija Bhashyam**
-MS Computer Science — University of California, Riverside
 AI / Data Analytics / Visual Intelligence Projects
