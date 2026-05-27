@@ -8,6 +8,13 @@
 
 [VisionIQ GitHub Repository](https://github.com/BhashyamS/image_insight_bot.git?utm_source=chatgpt.com)
 
+## Demo - Loom Video
+
+[VisionIQ Demo Video](https://www.loom.com/share/08f5faa52c564e8a8e7360edcd0b082d)
+
+
+
+
 ---
 
 ## Overview
